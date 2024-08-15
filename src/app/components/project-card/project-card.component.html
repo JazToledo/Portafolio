@@ -1,0 +1,32 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
+
+
+  <article *ngFor="let project of projects"
+    class="bg-white  p-6 mb-6 shadow transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer border">
+
+    <!-- Modal -->
+    <!-- Modal Header -->
+    <div class="flex justify-between items-center border-b-2 border-gray-200 pb-4">
+      <h2 class="text-2xl font-semibold">{{ project.name }}</h2>
+    </div>
+
+    <!-- Modal Content -->
+    <div class="mt-6 space-y-4">
+      <p class="text-lg text-gray-600">{{ project.description }}</p>
+      <div class="flex flex-col space-y-4">
+        <!-- <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Create
+          New Project</button> -->
+        <a href="{{ project.url }}" target="_blank"
+          class="flex items-center justify-center gap-2 bg-gray-900 text-gray-100 px-4 py-2 rounded-lg hover:bg-black transition duration-300">
+          <img src="https://svgur.com/i/yp2.svg" alt="Github Icon">
+          Visitar GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="mt-6 text-sm text-gray-500">
+      <p>{{ project.timeAgo }}</p>
+    </div>
+  </article>
+</div>
