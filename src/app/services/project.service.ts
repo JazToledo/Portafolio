@@ -10,7 +10,7 @@ import * as moment from 'moment';
 })
 export class ProjectService {
 
-  private apiUrl = 'http://localhost:5000/api';
+  private apiUrl = 'https://tiny-pavia-jaztoledo-560ef224.koyeb.app/api';
 
   private octokit = new Octokit();
 
